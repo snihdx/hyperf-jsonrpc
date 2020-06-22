@@ -1,0 +1,19 @@
+{
+    "name": "longxiaoyang/jsonrpc",
+    "description": "hyperf jsonrpc 接口类",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "小龙",
+            "email": "864566775@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "longxiaoyang\\jsonrpc\\": "src/"
+        }
+    }
+}
