@@ -1,19 +1,50 @@
 {
-    "name": "longxiaoyang/jsonrpc",
-    "description": "hyperf jsonrpc 接口类",
+    "name": "longxiaoyang/nacos-client",
+    "description": "nacos clent.",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "小龙",
-            "email": "864566775@qq.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=7.2",
+        "psr/container": "^1.0",
+        "hyperf/load-balancer": "~2.0.0",
+        "hyperf/utils": "~2.0.0",
+        "roave/better-reflection": "^4.0",
+        "hyperf/nacos": "~2.0.20"
+    },
+    "require-dev": {
+        "malukenho/docheader": "^0.1.6",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.0.0",
+        "friendsofphp/php-cs-fixer": "^2.9"
+    },
+    "suggest": {
+        "hyperf/di": "For better container experience.",
+        "hyperf/pool": "Required to use connection pool."
+    },
     "autoload": {
         "psr-4": {
-            "longxiaoyang\\jsonrpc\\": "src/"
+            "Longxiaoyang\\NacosClient\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        },
+        "hyperf": {
+            "config": "Longxiaoyang\\NacosClient\\ConfigProvider"
+        }
+    },
+    "bin": [
+    ],
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1",
+        "test": "phpunit --colors=always"
     }
 }
